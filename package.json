@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+	"publish": "tsc -b && vite build && gh-pages -d dist"
   },
   "dependencies": {
     "@thisbeyond/solid-select": "^0.15.0",
