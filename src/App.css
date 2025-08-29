@@ -50,11 +50,44 @@ div#root {
 			justify-content: center;
 
 			&>li {
+				padding: 10px 0;
 				width: 100%;
-				height: 50px;
+				height: min-content;
+				display: flex;
+
+				&>div:is(.selectTag) {
+					&.solid-select-container {
+						color: #fa7f25;
+					}
+
+					.solid-select-control {
+						border-color: #fca560;
+
+						&:focus-within {
+							outline-color: #fca560;
+						}
+					}
+
+					.solid-select-placeholder {
+						color: #fca560;
+					}
+
+					.solid-select-option {
+						&:hover {
+							background-color: #fa7f25;
+							color: #fff;
+						}
+
+						&[data-focused="true"] {
+							background-color: #fca560;
+							color: #fff;
+						}
+					}
+				}
 
 				&>button {
 					height: 100%;
+					width: 40px;
 				}
 			}
 		}
